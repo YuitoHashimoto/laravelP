@@ -1,0 +1,77 @@
+/*
+Theme Name: profile
+Author: hoge
+Version: 1.0
+ */
+ @import '_ress', '_var', '_common','_index','_about','works','single';
+
+body {
+    font-family: 'Noto Sans Javanese','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    overflow: hidden;
+}
+
+a:visited, a:link {
+    text-decoration: none;
+}
+
+// headStyle
+.head__logo {
+    position: absolute;
+    z-index: 100;
+    top: 2.6rem;
+    left: 2.6rem;
+    cursor: pointer;;
+}// logo
+
+// menuStyle
+.head__menu {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 10.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8.4rem;
+    height: 13.0rem;
+    background: $mainColor;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+// nav
+.navBox {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: -18vw;
+    width: 18vw;
+    height: 100vh;
+    background: $mainColor;
+    padding: 0 0 0 3vw;
+    text-align: left;
+    transition: 1.0s ease-in-out;
+    img {
+        position: absolute;
+        top: 2.6rem;
+        left: 2.6rem;
+        cursor: pointer;
+    }
+    p {
+        font-size: 1.6rem;
+        margin: 17.0rem 0 0 0;
+        color: $accentColor;
+        font-weight: normal;
+    }
+    &__nav {
+        ul {
+            list-style: none;
+            li {
+                margin: 0 0 2.4rem 0;
+                a {
+                    font-size: 3.0rem;
+                    color: $accentColor;
+                }
+            }
+        }
+    }
+}// navBox
