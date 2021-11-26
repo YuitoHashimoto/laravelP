@@ -1,45 +1,24 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Yuito's - About</title>
-</head>
-<body>
-    <main class="about">
-        <div class="head__logo"><a href="index.html"><img src="img/mainLogo.svg" alt="ポートフォリオロゴ"></a></div>
-        <!-- nav -->
-        <div class="head__menu" id="navBtn"><img src="img/menuIcon.svg" alt="ハンバーガーアイコン"></div>
-        <div class="navBox" id="navContent">
-            <img id="navBack" src="img/backIcon.svg" alt="バツ">
-            <p>contents</p>
-            <nav class="navBox__nav">
-                <ul>
-                    <li><a href="/">TOP</a></li>
-                    <li><a href="/about">ABOUT</a></li>
-                    <li><a href="works.html">WORKS</a></li>
-                </ul>
-            </nav>
+@extends('layouts.layout')
+@section('title', 'About')
+@section('content')
+<main class="about">
+    @include('layouts.head')
+    <section class="about__head">
+        <h1>ABOUT</h1>
+    </section>
+    <section class="about__name">
+        <div class="about__name__img"></div>
+        <div class="about__name__txt">
+            <h2>
+                <span>Web Engineer</span><br>
+                YUITO HASHIMOTO
+            </h2>
         </div>
-        <!-- nav -->
-        <section class="about__head">
-            <h1>ABOUT</h1>
-        </section>
-        <section class="about__name">
-            <div class="about__name__img"></div>
-            <div class="about__name__txt">
-                <h2>
-                    <span>Web Engineer</span><br>
-                    YUITO HASHIMOTO
-                </h2>
-            </div>
-        </section>
-        <div class="about__content">
-            <section class="about__content__box">
-                <h3>PROFILE</h3>
-                <pre>
+    </section>
+    <div class="about__content">
+        <section class="about__content__box">
+            <h3>PROFILE</h3>
+            <pre>
 1999年大阪生まれ泉州育ち。ECCコンピュータ専門学校Webデザインコース3年 22年卒予定
 橋本 唯永(はしもと ゆいと)と申します。フルスタックエンジニア目指しています。
 新しいことに触れることも好きで、よく色々なことに挑戦しています！
@@ -54,78 +33,75 @@
 
 現在は身に付けた技術を仕事にするために、就活にはげんでいます。
 趣味はE-sportsで、コミュニティ大会に出場したりコーチングのアルバイトをしたりしています。
-友人と飲みに出かけるのも好きで学校の帰りに居酒屋に通ってます! はやくコロナが明けてほしいです。
-                </pre>
-            </section>
-            <section class="about__content__box">
-                <h3>SKILL</h3>
-                <pre>
+            </pre>
+        </section>
+        <section class="about__content__box">
+            <h3>SKILL</h3>
+            <pre>
 HTML, CSS(Sass), JavaScript(Vue, React), PHP(Laravel), Ruby(Ruby on Rails), WordPressに触れています。
 私が一番得意なのがJavaScriptです。
 幅広く触れているが故に深く勉強できていないのが、私のダメなところだと思いますが実際に案件が来た際に一からの勉強ではなく基礎を知った
 状態で はじめられるので作業はスムーズに行えています。
-                </pre>
-                <div class="about__content__box__skill">
-                    <!-- HTML -->
-                    <div class="skillVar">
-                        <p class="skillVar__lang">HTML</p>
-                        <div class="html">
+            </pre>
+            <div class="about__content__box__skill">
+                <!-- HTML -->
+                <div class="skillVar">
+                    <p class="skillVar__lang">HTML</p>
+                    <div class="html">
 
-                        </div>
-                        <p class="skillVar__num">70%</p>
                     </div>
-                    <!-- CSS -->
-                    <div class="skillVar">
-                        <p class="skillVar__lang">CSS</p>
-                        <div class="css">
-
-                        </div>
-                        <p class="skillVar__num">65%</p>
-                    </div>
-                    <!-- JS -->
-                    <div class="skillVar">
-                        <p class="skillVar__lang">JavaScript</p>
-                        <div class="js">
-
-                        </div>
-                        <p class="skillVar__num">80%</p>
-                    </div>
-                    <!-- PHP -->
-                    <div class="skillVar">
-                        <p class="skillVar__lang">PHP</p>
-                        <div class="php">
-
-                        </div>
-                        <p class="skillVar__num">60%</p>
-                    </div>
-                    <!-- WordPress -->
-                    <div class="skillVar">
-                        <p class="skillVar__lang">WordPress</p>
-                        <div class="wp">
-
-                        </div>
-                        <p class="skillVar__num">55%</p>
-                    </div>
-                    <!-- Ruby -->
-                    <div class="skillVar">
-                        <p class="skillVar__lang">Ruby(学習中)</p>
-                        <div class="ruby">
-
-                        </div>
-                        <p class="skillVar__num">20%</p>
-                    </div>
-                    <!-- Python -->
-                    <div class="skillVar">
-                        <p class="skillVar__lang">Python(学習中)</p>
-                        <div class="python">
-
-                        </div>
-                        <p class="skillVar__num">10%</p>
-                    </div>
+                    <p class="skillVar__num">70%</p>
                 </div>
-            </section>
-        </div>
-    </main>
-    <script src="js/script.js"></script>
-</body>
-</html>
+                <!-- CSS -->
+                <div class="skillVar">
+                    <p class="skillVar__lang">CSS</p>
+                    <div class="css">
+
+                    </div>
+                    <p class="skillVar__num">65%</p>
+                </div>
+                <!-- JS -->
+                <div class="skillVar">
+                    <p class="skillVar__lang">JavaScript</p>
+                    <div class="js">
+
+                    </div>
+                    <p class="skillVar__num">80%</p>
+                </div>
+                <!-- PHP -->
+                <div class="skillVar">
+                    <p class="skillVar__lang">PHP</p>
+                    <div class="php">
+
+                    </div>
+                    <p class="skillVar__num">60%</p>
+                </div>
+                <!-- WordPress -->
+                <div class="skillVar">
+                    <p class="skillVar__lang">WordPress</p>
+                    <div class="wp">
+
+                    </div>
+                    <p class="skillVar__num">55%</p>
+                </div>
+                <!-- Ruby -->
+                <div class="skillVar">
+                    <p class="skillVar__lang">Ruby(学習中)</p>
+                    <div class="ruby">
+
+                    </div>
+                    <p class="skillVar__num">20%</p>
+                </div>
+                <!-- Python -->
+                <div class="skillVar">
+                    <p class="skillVar__lang">Python(学習中)</p>
+                    <div class="python">
+
+                    </div>
+                    <p class="skillVar__num">10%</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+@endsection

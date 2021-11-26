@@ -1,5 +1,3 @@
-@extends('index')
-@section('head')
 <div class="head__logo"><a href="#"><img src="img/mainLogo.svg" alt="ポートフォリオロゴ"></a></div>
 <!-- nav -->
 <div class="head__menu" id="navBtn"><img src="img/menuIcon.svg" alt="ハンバーガーアイコン"></div>
@@ -14,5 +12,3 @@
         </ul>
     </nav>
 </div>
-<!-- nav -->
-@endsection
