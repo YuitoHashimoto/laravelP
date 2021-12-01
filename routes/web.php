@@ -24,6 +24,9 @@ Route::get('/about', function () {
 });
 
 // works
-Route::get('/works', function () {
-    return view('works');
-});
+// Route::get('/works', function () {
+//     return view('works');
+// });
+
+//woksList
+Route::get('/works', 'WorkController@showList')->name('works');

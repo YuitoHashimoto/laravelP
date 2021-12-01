@@ -3,16 +3,17 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use app\Models\Work;
 
-class DatabaseSeeder extends Seeder
+class WorksTableSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      *
      * @return void
      */
     public function run()
     {
-        $this->call(WorkTableSeeder::class);
+        factory(Work::class, 3)->create();
     }
 }
