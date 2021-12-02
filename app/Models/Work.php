@@ -13,6 +13,8 @@ class Work extends Model
     // 可変項目
     protected $fillable = [
         'title',
-        'content'
+        'content',
+        'gitUrl',
+        'siteUrl'
     ];
 }

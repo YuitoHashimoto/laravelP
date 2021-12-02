@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\WorkController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,10 +24,8 @@ Route::get('/about', function () {
     return view('about');
 });
 
-// works
-// Route::get('/works', function () {
-//     return view('works');
-// });
-
 //woksList
-Route::get('/works', 'WorkController@showList')->name('works');
+Route::get('/works', [WorkController::class, 'showList'])->name('works');
+
+// workDetail
+Route::get('/works/{id}', [WorkController::class, 'showDetail'])->name('show');

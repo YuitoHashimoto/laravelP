@@ -17,6 +17,8 @@ class CreateWorksTable extends Migration
             $table->id();
             $table->string('title',100);
             $table->text('content');
+            $table->string('gitUrl',100);
+            $table->string('siteUrl',100);
             $table->timestamps();
         });
     }

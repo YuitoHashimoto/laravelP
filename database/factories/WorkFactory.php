@@ -2,13 +2,19 @@
 
 namespace Database\Factories;
 
-use app\Models\Work;
-use Faker\Generator as Faker;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
-
-$factory->define(Work::class, function(Faker $faker) {
-    return [
-        'title' => $faker->word,
-        'content' => $faker->realText
-    ];
-});
+class WorkFactory extends Factory
+{
+    /**
+     * Define the model's default state.
+     *
+     * @return array
+     */
+    public function definition()
+    {
+        return [
+            //
+        ];
+    }
+}

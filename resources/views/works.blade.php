@@ -5,10 +5,14 @@
     @include('layouts.head')
     <div class="works__content">
         <div class="works__content__box">
+            @foreach($works as $work)
             <article class="works__content__box__art">
-                <div></div>
-                <p>Puzzle</p>
+                <a href="/works/{{$work->id}}">
+                    <div></div>
+                    <p>{{$work->title}}</p>
+                </a>
             </article>
+            @endforeach
             <article class="works__content__box__art">
                 <div></div>
                 <p>Puzzle</p>
