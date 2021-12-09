@@ -15,6 +15,8 @@ class Work extends Model
         'title',
         'content',
         'gitUrl',
-        'siteUrl'
+        'siteUrl',
+        'updated_at',
+        'created_at'
     ];
 }

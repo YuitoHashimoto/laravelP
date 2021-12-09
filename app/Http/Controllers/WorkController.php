@@ -28,13 +28,34 @@ class WorkController extends Controller
     public function showDetail($id) {
         $work = Work::find($id);
 
-        if (is_null($work)) {
-            \Session::flash('err_msg', 'データがありません。');
-            return redirect(route('works'));
-        }
+        // if (is_null($work)) {
+        //     \Session::flash('err_msg', 'データがありません。');
+        //     return redirect(route('works'));
+        // }
 
         return view('single',
             ['work' => $work]
         );
+    }
+
+    /**
+     * 作品登録画面を表示する
+     *
+     * @return view
+     */
+    public function showCreate() {
+        return view('workForm');
+    }
+
+    /**
+     * 作品登録する
+     *
+     * @return view
+     */
+    public function exeStore(Request $request) {
+        // Work::create();
+        dd($request->all());
+
+        return redirect(route('works'));
     }
 }
